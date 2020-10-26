@@ -108,6 +108,44 @@ This is visible when you open the page for an individual protein, but you can al
 ![Click the pen icon](img/uniprot_serA_table_pencil_marked.png)
 
 In the dialog that follows, you can select whichever columns you want to display, adding e.g. "eggNOG" (under "Phylogenomic", under "Databases"), "Pfam" and "TIGRFAMs" (both under "Family and domain", under "Databases").
-After selecting, click "Save" and your table should look like this:
+After adding those three, click "Save" and your table should look like this:
 
 ![SerA table after adding "eggNOG", "Pfam" and "TIGRFAMs"](img/uniprot_serA_table_after_adding_columns.png)
+
+#### Selecting a profile for a protein
+
+Selecting a suitable profile for a pathway involves a couple of steps, and is a process that sometimes takes a few iterations to get right.
+Here, we're going to start with the simpler task of finding a suitable profile for a protein and then evaluate whether the profile is suitable also as an indicator of a specific pathway.
+
+In the table of Uniprot hits for the *serA* gene you can see that the first and third entry both have "COG0111" in the eggNOG column and "PF00389", "PF02826" and "PF01842" in the Pfam column, whereas the second entry does not.
+You can also see that the second entry has a different protein name than the other two.
+Together, the difference in profiles and protein name, suggests that the second entry is something else than number one and three.
+Moreover, the protein name of the second entry, "Selenate reductase subunit alpha", does not fit with the MetaCyc reaction we started out with, that should be catalyzed by an enzyme called "D-3-phosphoglycerate dehydrogenase" like entries one and three.
+
+After disregarding entry two, we can start thinking about which of the profile options common between entries one and three is the best choice.
+First of all, it's quite common that there are more than one Pfam profile, whereas this is not as common for eggNOGs and TIGRFAMs.
+The reason is that Pfam focuses on domains, i.e. individually folding parts of proteins, rather than full length proteins.
+Quite often, domains occur in different combinations in different proteins, which explains Pfam's choice to focus on domains.
+A domain profile can, carefully selected, target only the important part of a protein that catalyzes a reaction, where a profile for a full length protein might include for the reaction non-essential parts of proteins.
+The latter might render a profile for full length proteins *too specific* so that it misses some proteins that do the same thing but lack certain parts that the profile includes.
+Therefore, I often start by looking at Pfam profiles for searches.
+
+The problem then becomes, which Pfam profile to choose.
+If you click on the link for the "PF00389" profile, you come to a page describing a family of domains called "D-isomer specific 2-hydroxyacid dehydrogenase, catalytic domain" -- sounds pretty good to me!
+The other two profiles, "PF02826" and "PF01842" respectivelly, are called "D-isomer specific 2-hydroxyacid dehydrogenase, NAD binding domain" and "ACT domain" respectivelly.
+The latter is further described as "found in a variety of proteins involved in metabolism" -- not very promising.
+The "NAD binding domain" part of the name of "PF02826" is also indicating it might not be as specific to this particular enzyme as the first profile, as NAD is a common cofactor in enzymes.
+In this case we hence select "PF00389" to continue with.
+
+To verify that the Pfam "PF00389" describes "D-3-phosphoglycerate dehydrogenase" and not other proteins, one can search Uniprot for this Pfam using the "Advanced" link at the top that we formerly used to search for gene names.
+You'll find Pfam under "Cross-references/Family and Domain Databases"; I'm specifying "Bacteria" under "Taxonomy" too.
+The result should look like this (after adding the "EC number" column from the table "pencil" menu):
+
+![PF00389 result at Uniprot](img/uniprot_pf00389_table.png)
+
+As you can see, there are a lot of different protein names and E.C. numbers (E.C. stands for "Enzyme commission" and is a system for classification of enzymes; one reaction/enzyme, one E.C. number), indicating that the PF00389 is not at all specific for the reaction we targeted!
+So, despite the profile being called almost exactly the same as the protein we were targetting, it is not sufficiently specific for this protein.
+
+At this point, you have two choices: Check what the "COG0111" targets in a similar way as we did with "PF00389" or turn to another reaction, enzyme and protein in the pathway.
+If you have a lot of other reactions to choose from in the pathway you're targeting, you might want to go directly at the second option and go for the next reaction.
+If not, check the COG0111.
