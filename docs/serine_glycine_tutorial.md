@@ -14,11 +14,11 @@ Metabolic pathway information can be found primarily in two online databases: [K
 I'm going to use the latter, but I encourage you to also check out KEGG.
 
 BioCyc is a collection of organism specific metabolic and genomic databases.
-This means you choose which organism you want to work with (click the link "change organism database" in the top right corner) and then get access to information about its metabolic capacity (plus many more things!).
+This means that you choose which organism you want to work with (click the link "change organism database" in the top right corner) and then get access to information about its metabolic capacity (plus many more things!).
 Different organisms have different metabolic capacities and may also differ in how pathways are built.
 Besides the organism specific databases, [MetaCyc](https://metacyc.org) is a collection of *all* pathways.
 
-To make things clearer, I will use the *E. coli* K-12 database [EcoCyc](https://ecocyc.org) in this tutorial, even though MetaCyc would give us a more complete picture.
+To make things simpler, I will use the *E. coli* K-12 database [EcoCyc](https://ecocyc.org) in this tutorial, even though MetaCyc would give us a more complete picture.
 
 #### Finding the L-serine and L-glycine synthesis pathway in *E. coli*
 
@@ -149,3 +149,8 @@ So, despite the profile being called almost exactly the same as the protein we w
 At this point, you have two choices: Check what the "COG0111" targets in a similar way as we did with "PF00389" or turn to another reaction, enzyme and protein in the pathway.
 If you have a lot of other reactions to choose from in the pathway you're targeting, you might want to go directly at the second option and go for the next reaction.
 If not, check the COG0111.
+
+*To continue:* Please check the other enzymes in the pathway and see if you can find a good signature protein for the pathway.
+Note that you can also search with the E.C. number at Uniprot.
+This might be a better choice than the gene name in some cases, but note that the E.C. number will be shared by all proteins catalyzing a reaction.
+If an enzyme consists of multiple proteins or different, non-homologous, proteins catalyze the reaction, all will have the same E.C. number.
