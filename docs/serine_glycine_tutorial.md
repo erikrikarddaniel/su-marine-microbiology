@@ -39,11 +39,15 @@ After L-serine is synthesized, L-glycine is synthesized by extraction of the sid
 I have marked three key concepts with red ellipses: The enzyme/protein name, the gene name and the Enzyme Commission (EC) number.
 They will be important when we start searching for the enzymes and proteins.
 
+You can click on the arrows to find out more about a reaction.
+An important piece of information on reaction pages are the pathways a reaction participates in; *compare* the first reaction with the last in the above example.
+
 It is a bit of an art to study a pathway and identify which steps and enzymes might be good candidates as markers for the pathway, as, in many cases, different pathways cross each other so that reactions and compounds participate in many pathways.
 Moreover, reactions in pathways do not necessarily run in only one direction but are equilibrium reactions whose direction are determined by the concentrations of compounds on either side of the reaction.
 In the L-serine and L-glycine pathway as described in EcoCyc, you can see that all arrows except one have arrowheads on both sides, indicating they're equilibrium reactions.
 
 In the example above, there are no enzymes that consist of more than one protein, although this is rather common.
+The below shows how that looks.
 
 ![RNR reaction](img/rnr.png)
 
@@ -69,15 +73,41 @@ The result will look like this:
 
 Clicking on a single entry, will give you a lot of information about this particular protein.
 
+If you click on the top entry (the *E. coli* protein) and scroll down (or search for "EGGNOG" which I did), you will see this:
+
+![serA in E. coli](img/uniprot_serA_eggnog_pfam.png)
+
+Uniprot entry for *serA* in *E. coli*.
+I have marked the eggNOG and Pfam parts, that can be used as sources of profiles for finding proteins.
+If the entry had a TIGRFAM, you would find that under "Family and domain databases", just like Pfam.
+(I don't know why eggNOG is under "Phylogenomic databases" and Pfam and TIGRFAM are under "Family and domain databases".)
+
 ### Protein profile databases
 
 When you use BLAST to search for similar sequences, you use a single sequence as template.
-This works fine when target sequences are relatively similar, but not so well for homologs that have diverged as similarity can become very low even between related sequences.
+This works fine when target sequences are relatively similar, but not so well for homologs that have diverged a lot, as similarity can become very low even between related sequences.
 Moreover, BLAST uses a scoring scheme that treats each position in a protein identically even though we know that certain positions in the amino acid sequence will vary more than other.
-Statistical profiles are more sensitive search tools than single sequences.
+
+Statistical profiles, known as *H*idden *M*arkov *M*odels (HMM) are more sensitive search tools than single sequences.
 They are made from alignments of multiple sequences and consist of probabilities for observing a specific amino acid at a specific position of a protein.
 The residues that vary little between homologous proteins from different organisms will have high probabilities for a few amino acids, whereas positions that vary more between proteins will have smaller probabilities for a larger number of amino acids.
+
+HMMs can be visualized as "sequence logos", where the probability for observing different amino acids are reflected in heights of letters.
+The total height of a pile of letters is the "information content" (strength of signal) for that position, and the relative height of each letter is the probability for that amino acid.
+This is an example of a profile made from NrdR ATP-cone sequences.
+
+![HMM model as logo](img/NrdR.hmmlogo.png)
 
 There are (at least) three databases that contains profiles that you can download and use to search for proteins in your own dataset: [Pfam](http://pfam.xfam.org/), [TIGRFAM](http://tigrfams.jcvi.org/) (has been inaccessible for a while) and [EGGNOG](http://eggnog5.embl.de/).
 The philosophies differ a little between the three, but they are all useful.
 For some proteins you may find that the Pfam profile is the best, but for another you might choose one of the other two.
+
+Proteins in Uniprot are scanned for the presence of Pfam, TIGRFAM and EGGNOG profiles.
+This is visible when you open the page for an individual protein, but you can also tailor the table view by clicking the pencil icon at the top right corner of the table:
+
+![Click the pen icon](img/uniprot_serA_table_pencil_marked.png)
+
+In the dialog that follows, you can select whichever columns you want to display, adding e.g. "eggNOG" (under "Phylogenomic", under "Databases"), "Pfam" and "TIGRFAMs" (both under "Family and domain", under "Databases").
+After selecting, click "Save" and your table should look like this:
+
+![SerA table after adding "eggNOG", "Pfam" and "TIGRFAMs"](img/uniprot_serA_table_after_adding_columns.png)
