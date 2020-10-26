@@ -40,19 +40,21 @@ I have marked three key concepts with red ellipses: The enzyme/protein name, the
 They will be important when we start searching for the enzymes and proteins.
 
 You can click on the arrows to find out more about a reaction.
-An important piece of information on reaction pages are the pathways a reaction participates in; *compare* the first reaction with the last in the above example.
+Important pieces of information on reaction pages are the pathways a reaction participates in; *compare* the first reaction with the last in the above example.
 
 It is a bit of an art to study a pathway and identify which steps and enzymes might be good candidates as markers for the pathway, as, in many cases, different pathways cross each other so that reactions and compounds participate in many pathways.
 Moreover, reactions in pathways do not necessarily run in only one direction but are equilibrium reactions whose direction are determined by the concentrations of compounds on either side of the reaction.
 In the L-serine and L-glycine pathway as described in EcoCyc, you can see that all arrows except one have arrowheads on both sides, indicating they're equilibrium reactions.
+This is in itself not a show-stopper when it comes to finding good protein markers for pathways as it's not uncommon that equilibrium reactions predominantly go in one direction.
+One can, for example, assume that concentrations of glycine and 5,10-tetrahydrofolate are normally not sufficient to drive the reaction to the right in the above scheme.
+In the "pathway summary" below the pathway diagram in EcoCyc, they mention that 5,10-tetrahydrofolate is the "the major source of one-carbon units in many organisms", which likely means it's used up for synthesis of other compounds relatively rapidly.
 
 In the example above, there are no enzymes that consist of more than one protein, although this is rather common.
 The below shows how that looks.
 
 ![RNR reaction](img/rnr.png)
 
-An example of how reactions with multicomponent enzymes look.
-Besides two genes coding for proteins in the enzyme, there are two, paralogous pairs: *nrdA/nrdB* and *nrdE/nrdF* respectively.
+Besides two genes coding for two different proteins in the enzyme, there are two, paralogous pairs in the *E. coli* genome: *nrdA/nrdB* and *nrdE/nrdF* respectively.
 
 ### Protein databases
 
@@ -94,7 +96,7 @@ The residues that vary little between homologous proteins from different organis
 
 HMMs can be visualized as "sequence logos", where the probability for observing different amino acids are reflected in heights of letters.
 The total height of a pile of letters is the "information content" (strength of signal) for that position, and the relative height of each letter is the probability for that amino acid.
-This is an example of a profile made from NrdR ATP-cone sequences.
+This is an example of a profile made from NrdR ATP-cone sequences, just serving as an example of how a relatively short profile can be visualized.
 
 ![HMM model as logo](img/NrdR.hmmlogo.png)
 
@@ -123,7 +125,7 @@ Together, the difference in profiles and protein name, suggests that the second 
 Moreover, the protein name of the second entry, "Selenate reductase subunit alpha", does not fit with the MetaCyc reaction we started out with, that should be catalyzed by an enzyme called "D-3-phosphoglycerate dehydrogenase" like entries one and three.
 
 After disregarding entry two, we can start thinking about which of the profile options common between entries one and three is the best choice.
-First of all, it's quite common that there are more than one Pfam profile, whereas this is not as common for eggNOGs and TIGRFAMs.
+First of all, it's quite common that there is more than one Pfam profile, whereas this is not as common for eggNOGs and TIGRFAMs (although it happens also with them).
 The reason is that Pfam focuses on domains, i.e. individually folding parts of proteins, rather than full length proteins.
 Quite often, domains occur in different combinations in different proteins, which explains Pfam's choice to focus on domains.
 A domain profile can, carefully selected, target only the important part of a protein that catalyzes a reaction, where a profile for a full length protein might include for the reaction non-essential parts of proteins.
@@ -137,20 +139,20 @@ The latter is further described as "found in a variety of proteins involved in m
 The "NAD binding domain" part of the name of "PF02826" is also indicating it might not be as specific to this particular enzyme as the first profile, as NAD is a common cofactor in enzymes.
 In this case we hence select "PF00389" to continue with.
 
-To verify that the Pfam "PF00389" describes "D-3-phosphoglycerate dehydrogenase" and not other proteins, one can search Uniprot for this Pfam using the "Advanced" link at the top that we formerly used to search for gene names.
+To verify that the Pfam "PF00389" describes "D-3-phosphoglycerate dehydrogenase" and no other proteins, one can search Uniprot for this Pfam using the "Advanced" link at the top that we formerly used to search for gene names.
 You'll find Pfam under "Cross-references/Family and Domain Databases"; I'm specifying "Bacteria" under "Taxonomy" too.
 The result should look like this (after adding the "EC number" column from the table "pencil" menu):
 
 ![PF00389 result at Uniprot](img/uniprot_pf00389_table.png)
 
-As you can see, there are a lot of different protein names and E.C. numbers (E.C. stands for "Enzyme commission" and is a system for classification of enzymes; one reaction/enzyme, one E.C. number), indicating that the PF00389 is not at all specific for the reaction we targeted!
+As you can see, there are a lot of different protein names and E.C. numbers (E.C. stands for "Enzyme Commission" and is a system for classification of enzymes; one reaction/enzyme, one E.C. number), indicating that the PF00389 is not at all specific for the reaction we targeted!
 So, despite the profile being called almost exactly the same as the protein we were targetting, it is not sufficiently specific for this protein.
 
 At this point, you have two choices: Check what the "COG0111" targets in a similar way as we did with "PF00389" or turn to another reaction, enzyme and protein in the pathway.
 If you have a lot of other reactions to choose from in the pathway you're targeting, you might want to go directly at the second option and go for the next reaction.
 If not, check the COG0111.
 
-*To continue:* Please check the other enzymes in the pathway and see if you can find a good signature protein for the pathway.
+*To continue:* After you have checked if "COG0111" might be a good tool for identification of this protein, please check the other enzymes in the pathway and see if you can find a good signature protein for the pathway.
 Note that you can also search with the E.C. number at Uniprot.
 This might be a better choice than the gene name in some cases, but note that the E.C. number will be shared by all proteins catalyzing a reaction.
 If an enzyme consists of multiple proteins or different, non-homologous, proteins catalyze the reaction, all will have the same E.C. number.
