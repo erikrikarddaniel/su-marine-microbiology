@@ -2,7 +2,13 @@
 
 ## Tutorial: Proteins in L-serine and L-glycine synthesis
 
-The aim with this tutorial is to show you how to find proteins that you can search for as markers of a certain metabolism.
+The overall aim with this tutorial is to give some insight in how to annotate genomes and find positive evidence for the presence or absence of metabolic pathways.
+In the most general case, genomes are annotated by searching for genes, i.e. stretches of nucleotides coding for a protein or a functional RNA molecule.
+The genes are then searched for and aligned with genes from other genomes and given a name -- plus in many cases a set of codes to associate it with other sources of information -- taken from one or more similar proteins.
+This search is performed with BLAST or similar tools and starts with the sequences of the genome being annotated.
+The approach is suitable as a starting point, but if one wants more certain information about e.g. a specific pathway, one often has to turn the approach around and look for the proteins involved in the pathway with more sensitive tools than BLAST.
+
+This tutorial will show you how to find proteins that you can search for as markers of a certain metabolism.
 I will exemplify with synthesis of two small amino acids that are related to each other in how they're produced: L-serine and L-glycine.
 
 Briefly, I will show how to find information about a pathway, identify enzymes that are good markers for the pathway and find search tools that you can apply to nucleotide sequence data such as metagenomes or metatranscriptomes.
