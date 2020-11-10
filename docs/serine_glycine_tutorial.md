@@ -2,9 +2,16 @@
 
 # Overview
 
-This tutorial is meant to be performed in steps:
+This tutorial is meant to be performed in steps. 
+After each of the steps, take some time to try it out yourself.
 
 1. Learn about [pathway databases](#pathway-databases)
+
+2. Learn about [protein databases](#protein-databases)
+
+3. Learn about [protein profile search tools and databases](#protein-profile-databases)
+
+4. Scan the [TARA Oceans Gene Atlas](#testing-your-profiles) for your pathway
 
 # Tutorial: Proteins in L-serine and L-glycine synthesis
 
