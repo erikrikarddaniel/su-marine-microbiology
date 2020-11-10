@@ -75,6 +75,16 @@ The below shows how that looks.
 
 Besides two genes coding for two different proteins in the enzyme, there are two, paralogous pairs in the *E. coli* genome: *nrdA/nrdB* and *nrdE/nrdF* respectively.
 
+### Pathway database exercise
+
+Search [Metacyc](https://metacyc.org) or [EcoCyc](https://ecocyc.org) for any of the following pathways:
+
+* Vitamin B12 synthesis (can *E. coli* make B12?)
+
+* PHB synthesis (what is this?)
+
+* Aromatic amino acid synthesis
+
 ## Protein databases
 
 From knowledge about the pathway, we can step down into the enzymes and proteins that take part in catalyzing each reaction.
@@ -102,6 +112,10 @@ Uniprot entry for *serA* in *E. coli*.
 I have marked the eggNOG and Pfam parts, that can be used as sources of profiles for finding proteins.
 If the entry had a TIGRFAM, you would find that under "Family and domain databases", just like Pfam.
 (I don't know why eggNOG is under "Phylogenomic databases" and Pfam and TIGRFAM are under "Family and domain databases".)
+
+### Protein database exercise
+
+Look up some of the enzymes from the pathway you chose in the [pathway database exercise](#pathway-database-exercise).
 
 ## Protein profile databases
 
@@ -176,6 +190,10 @@ Note that you can also search with the E.C. number at Uniprot.
 This might be a better choice than the gene name in some cases, but note that the E.C. number will be shared by all proteins catalyzing a reaction.
 If an enzyme consists of multiple proteins or different, non-homologous, proteins catalyze the reaction, all will have the same E.C. number.
 
+### Protein profile exercise
+
+Find profiles for some of the enzymes from the pathway you looked up in the [protein database exercise](#protein-database-exercise).
+
 ## Testing your profiles
 
 The TARA Oceans project has collected a lot of metagenomic and metatranscriptomic sequences, which has been turned into gene catalogs.
@@ -203,3 +221,7 @@ Even further down, you get a taxonomical breakdown of hits in a *Krona* diagram:
 ![Ocean gene atlas results](img/ocean_gene_atlas_02.png)
 
 (The Krona diagram can be analyzed by hovering your mouse pointer over its parts.)
+
+### Protein database exercise
+
+Search the [Ocean Gene Atlas](http://tara-oceans.mio.osupytheas.fr/ocean-gene-atlas/) for the profiles you found in [protein profile exercise](#protein-profile-exercise).
