@@ -199,6 +199,10 @@ Find profiles for some of the enzymes from the pathway you looked up in the [pro
 The TARA Oceans project has collected a lot of metagenomic and metatranscriptomic sequences, which has been turned into gene catalogs.
 These gene catalogs can be searched at the [Ocean Gene Atlas](http://tara-oceans.mio.osupytheas.fr/ocean-gene-atlas/).
 There are multiple ways of searching the catalog, e.g. BLAST with a single sequence (option no. 1) or HMM profiles, either uploading your own (no. 2) or through Pfam accessions (no. 3).
+
+Note that you can choose either a metagenomic or a -transcriptomic database, so you can study either the functional potential in a sample or the realization of that potential.
+You can also select either a prokaryotic ("OM-RGC") or a eukaryotic ("MATOU") database.
+
 When you have decided on one or more profiles to use as markers for your metabolism, you can download them and search the TARA database or, for the Pfam profiles, just use their Pfam accessions (e.g. PF00389).
 The result should look something like this:
 
