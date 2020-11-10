@@ -1,6 +1,6 @@
 # Marine Microbiology: Computational pathway analysis
 
-## Tutorial: Proteins in L-serine and L-glycine synthesis
+# Tutorial: Proteins in L-serine and L-glycine synthesis
 
 The overall aim with this tutorial is to give some insight in how to annotate genomes and find positive evidence for the presence or absence of metabolic pathways.
 In the most general case, genomes are annotated by searching for genes, i.e. stretches of nucleotides coding for a protein or a functional RNA molecule.
@@ -13,7 +13,7 @@ I will exemplify with synthesis of two small amino acids that are related to eac
 
 Briefly, I will show how to find information about a pathway, identify enzymes that are good markers for the pathway and find search tools that you can apply to nucleotide sequence data such as metagenomes or metatranscriptomes.
 
-### Pathway databases
+## Pathway databases
 
 The first step we will perform is to find information about the metabolic pathway used to synthesize the two amino acids.
 Metabolic pathway information can be found primarily in two online databases: [Kyoto Encyclopedia of Genes and Genomes (KEGG)](https://www.kegg.jp) and the [BioCyc Database Collection](https://biocyc.org).
@@ -26,7 +26,7 @@ Besides the organism specific databases, [MetaCyc](https://metacyc.org) is a col
 
 To make things simpler, I will use the *E. coli* K-12 database [EcoCyc](https://ecocyc.org) in this tutorial, even though MetaCyc would give us a more complete picture.
 
-#### Finding the L-serine and L-glycine synthesis pathway in *E. coli*
+### Finding the L-serine and L-glycine synthesis pathway in *E. coli*
 
 * Open [EcoCyc](https://ecocyc.org)
 
@@ -62,7 +62,7 @@ The below shows how that looks.
 
 Besides two genes coding for two different proteins in the enzyme, there are two, paralogous pairs in the *E. coli* genome: *nrdA/nrdB* and *nrdE/nrdF* respectively.
 
-### Protein databases
+## Protein databases
 
 From knowledge about the pathway, we can step down into the enzymes and proteins that take part in catalyzing each reaction.
 
@@ -90,7 +90,7 @@ I have marked the eggNOG and Pfam parts, that can be used as sources of profiles
 If the entry had a TIGRFAM, you would find that under "Family and domain databases", just like Pfam.
 (I don't know why eggNOG is under "Phylogenomic databases" and Pfam and TIGRFAM are under "Family and domain databases".)
 
-### Protein profile databases
+## Protein profile databases
 
 When you use BLAST to search for similar sequences, you use a single sequence as template.
 This works fine when target sequences are relatively similar, but not so well for homologs that have diverged a lot, as similarity can become very low even between related sequences.
@@ -120,7 +120,7 @@ After adding those three, click "Save" and your table should look like this:
 
 ![SerA table after adding "eggNOG", "Pfam" and "TIGRFAMs"](img/uniprot_serA_table_after_adding_columns.png)
 
-#### Selecting a profile for a protein
+### Selecting a profile for a protein
 
 Selecting a suitable profile for a pathway involves a couple of steps, and is a process that sometimes takes a few iterations to get right.
 Here, we're going to start with the simpler task of finding a suitable profile for a protein and then evaluate whether the profile is suitable also as an indicator of a specific pathway.
@@ -162,3 +162,22 @@ If not, check the COG0111.
 Note that you can also search with the E.C. number at Uniprot.
 This might be a better choice than the gene name in some cases, but note that the E.C. number will be shared by all proteins catalyzing a reaction.
 If an enzyme consists of multiple proteins or different, non-homologous, proteins catalyze the reaction, all will have the same E.C. number.
+
+## Testing your profiles
+
+The TARA Oceans project has collected a lot of metagenomic and metatranscriptomic sequences, which has been turned into gene catalogs.
+These gene catalogs can be searched at the [Ocean Gene Atlas](http://tara-oceans.mio.osupytheas.fr/ocean-gene-atlas/).
+There are multiple ways of searching the catalog, e.g. BLAST with a single sequence (option no. 1) or HMM profiles, either uploading your own (no. 2) or through Pfam accessions (no. 3).
+When you have decided on one or more profiles to use as markers for your metabolism, you can download them and search the TARA database or, for the Pfam profiles, just use their Pfam accessions (e.g. PF00389).
+The result should look something like this:
+
+![Ocean gene atlas results](img/ocean_gene_atlas_00.png)
+
+The above shows you some overall statistics like the number of hits, plus a navigation bar to the left.
+Scrolling down a bit shows you the geographic distribution of hits, *divided by filter fraction*:
+
+![Ocean gene atlas results](img/ocean_gene_atlas_01.png)
+
+Even further down, you get a taxonomical breakdown of hits in a *Krona* diagram:
+
+![Ocean gene atlas results](img/ocean_gene_atlas_02.png)
