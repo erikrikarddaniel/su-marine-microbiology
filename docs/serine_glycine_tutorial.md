@@ -3,7 +3,7 @@
 # Overview
 
 This tutorial is meant to be performed in steps. 
-After each of the steps, take some time to try it out yourself.
+After each of the steps, take some time to try it out yourself; there are suggestions for exercises after each main section.
 
 1. Learn about [pathway databases](#pathway-databases)
 
