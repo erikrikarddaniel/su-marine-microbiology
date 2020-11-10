@@ -5,13 +5,13 @@
 This tutorial is meant to be performed in steps. 
 After each of the steps, take some time to try it out yourself; there are suggestions for exercises after each main section.
 
-1. Learn about [pathway databases](#pathway-databases)
+1. Learn about [pathway databases](#pathway-databases) ([exercise](#pathway-database-exercise))
 
-2. Learn about [protein databases](#protein-databases)
+2. Learn about [protein databases](#protein-databases) ([exercise](#protein-database-exercise))
 
-3. Learn about [protein profile search tools and databases](#protein-profile-databases)
+3. Learn about [protein profile search tools and databases](#protein-profile-databases) ([exercise](#protein-profile-exercise))
 
-4. Scan the [TARA Oceans Gene Atlas](#testing-your-profiles) for your pathway
+4. Scan the [TARA Oceans Gene Atlas](#testing-your-profiles) for your pathway ([exercise](#ocean-gene-atlas-exercise))
 
 # Tutorial: Proteins in L-serine and L-glycine synthesis
 
@@ -222,6 +222,6 @@ Even further down, you get a taxonomical breakdown of hits in a *Krona* diagram:
 
 (The Krona diagram can be analyzed by hovering your mouse pointer over its parts.)
 
-### Protein database exercise
+### Ocean Gene Atlas exercise
 
 Search the [Ocean Gene Atlas](http://tara-oceans.mio.osupytheas.fr/ocean-gene-atlas/) for the profiles you found in [protein profile exercise](#protein-profile-exercise).
