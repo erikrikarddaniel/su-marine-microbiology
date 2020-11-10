@@ -1,5 +1,11 @@
 # Marine Microbiology: Computational pathway analysis
 
+# Overview
+
+This tutorial is meant to be performed in steps:
+
+1. Learn about [pathway databases](#pathway-databases)
+
 # Tutorial: Proteins in L-serine and L-glycine synthesis
 
 The overall aim with this tutorial is to give some insight in how to annotate genomes and find positive evidence for the presence or absence of metabolic pathways.
