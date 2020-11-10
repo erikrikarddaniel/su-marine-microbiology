@@ -174,10 +174,19 @@ The result should look something like this:
 ![Ocean gene atlas results](img/ocean_gene_atlas_00.png)
 
 The above shows you some overall statistics like the number of hits, plus a navigation bar to the left.
+
+*Note* the link to "User manual".
+
 Scrolling down a bit shows you the geographic distribution of hits, *divided by filter fraction*:
 
 ![Ocean gene atlas results](img/ocean_gene_atlas_01.png)
 
+(*Note* that you can select different depths in the above figures.
+DCM is short for Deep Chlorophyll Maximum, SRF is Surface, MES is mesopelagic, MIX is marine epipelagic mix layer and ZZZ is marine water layer.
+Which exact depth in meters these classes correspond to differs from site to site and sometimes even between times of the year.)
+
 Even further down, you get a taxonomical breakdown of hits in a *Krona* diagram:
 
 ![Ocean gene atlas results](img/ocean_gene_atlas_02.png)
+
+(The Krona diagram can be analyzed by hovering your mouse pointer over its parts.)
