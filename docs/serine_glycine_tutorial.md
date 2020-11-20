@@ -79,6 +79,8 @@ Besides two genes coding for two different proteins in the enzyme, there are two
 
 Search [Metacyc](https://metacyc.org) or [EcoCyc](https://ecocyc.org) for any of the following pathways:
 
+* Calvin-Benson cycle
+
 * Vitamin B12 synthesis (can *E. coli* make B12?)
 
 * PHB synthesis (what is this?)
