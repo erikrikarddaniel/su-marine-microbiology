@@ -129,7 +129,7 @@ Statistical profiles, known as *H*idden *M*arkov *M*odels (HMM) are more sensiti
 They are made from alignments of multiple sequences and consist of probabilities for observing a specific amino acid at a specific position of a protein.
 The residues that vary little between homologous proteins from different organisms will have high probabilities for a few amino acids, whereas positions that vary more between proteins will have smaller probabilities for a larger number of amino acids.
 
-HMMs can be visualized as "sequence logos", where the probability for observing different amino acids are reflected in heights of letters.
+HMMs can be visualized as "sequence logos", where the probability for observing different amino acids is reflected in heights of letters.
 The total height of a pile of letters is the "information content" (strength of signal) for that position, and the relative height of each letter is the probability for that amino acid.
 This is an example of a profile made from NrdR ATP-cone sequences, just serving as an example of how a relatively short profile can be visualized.
 
