@@ -92,7 +92,7 @@ Search [Metacyc](https://metacyc.org) or [EcoCyc](https://ecocyc.org) for any of
 From knowledge about the pathway, we can step down into the enzymes and proteins that take part in catalyzing each reaction.
 
 There are many databases that store protein sequences with annotations; the NCBI collection is perhaps the best known.
-[Uniprot](uniprot.org) is, in my opinion, better structured than the other alternatives.
+[Uniprot](https://www.uniprot.org/) is, in my opinion, better structured than the other alternatives.
 It consists of two parts, SwissProt, which is manually curated, and TrEMBL, which is not and only relies on computational annotation.
 
 One can search Uniprot for values in specific fields, by clicking the little grey link "Advanced" next to the "Search" button at the top right.
