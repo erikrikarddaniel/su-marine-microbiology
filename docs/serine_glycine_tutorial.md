@@ -167,7 +167,7 @@ A domain profile can, carefully selected, target only the important part of a pr
 The latter might render a profile for full length proteins *too specific* so that it misses some proteins that do the same thing but lack certain parts that the profile includes.
 Therefore, I often start by looking at Pfam profiles for searches.
 
-The problem then becomes, which Pfam profile to choose.
+The problem then becomes which Pfam profile to choose.
 If you click on the link for the "PF00389" profile, you come to a page describing a family of domains called "D-isomer specific 2-hydroxyacid dehydrogenase, catalytic domain" -- sounds pretty good to me!
 The other two profiles, "PF02826" and "PF01842" respectivelly, are called "D-isomer specific 2-hydroxyacid dehydrogenase, NAD binding domain" and "ACT domain" respectivelly.
 The latter is further described as "found in a variety of proteins involved in metabolism" -- not very promising.
